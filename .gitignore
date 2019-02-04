@@ -41,8 +41,19 @@ testem.log
 # System Files
 .DS_Store
 Thumbs.db
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+package-log.json
+
+=======
+>>>>>>> alex/daniel
 
 # Misc
 package-log.json
 api-keys.ts
 *-lock.json
+<<<<<<< HEAD
+=======
+>>>>>>> alex/daniel
+>>>>>>> alex/daniel

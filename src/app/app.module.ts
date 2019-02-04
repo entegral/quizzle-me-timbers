@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { routing } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -11,12 +10,12 @@ import { HostComponent } from './host/host.component';
 import { TeamComponent } from './team/team.component';
 import { HomeComponent } from './home/home.component';
 
-
 // Authentication Dependencies
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { masterFirebaseConfig } from './api-keys';
 import { AuthenticationService } from './services/authentication.service';
+import { routing } from './app.routing';
 
 
 
