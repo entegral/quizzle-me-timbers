@@ -1,3 +1,29 @@
-<p>
-  host works!
-</p>
+
+<div *ngIf="authService.user | async">
+
+  <div class="row">
+    <div class="col-md-4">
+
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ (authService.user | async)?.email }}</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+          <p class="card-text">Welcome to the Trivia App, Alex. </p>
+          <button (click)="logout()" class="btn btn-danger">Logout</button>
+          <a href="#" class="card-link">Another link</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-8">
+
+      <!-- PLACE COMPONENT DISPLAYING UPCOMING TRIVIA CLUES HERE -->
+
+    </div>
+
+  </div>
+
+
+
+</div>
