@@ -8,7 +8,7 @@ import { TeamComponent } from './team/team.component';
 import { routing } from './app.routing';
 import { HomeComponent } from './home/home.component';
 
-// Authentication Dependencies
+
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { masterFirebaseConfig } from './api-keys';
 
@@ -35,14 +35,10 @@ export const firebaseConfig = {
   ],
   imports: [
     BrowserModule,
-<<<<<<< HEAD
     AngularFireAuthModule,
-
-=======
     FormsModule,
     // HttpModule,
     routing
->>>>>>> 80a57770874f49ef93a703950bfa03a2eb211003
   ],
   providers: [],
   bootstrap: [AppComponent]
