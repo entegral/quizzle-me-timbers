@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../authentication.service';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
 
 
 @Component({
@@ -11,7 +12,11 @@ import { Router } from '@angular/router';
 })
 export class HostComponent implements OnInit {
 
-  constructor(public authService: AuthenticationService, public router: Router) { }
+  clues: Observable<any>;
+
+  constructor(public authService: AuthenticationService, public router: Router) {
+    
+   }
 
   ngOnInit() {
   }
@@ -19,6 +24,10 @@ export class HostComponent implements OnInit {
   logout(){
     this.authService.logout();
     this.router.navigate(['']);
+  }
+
+  removeClue(clue){
+
   }
 
 }

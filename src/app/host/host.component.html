@@ -4,13 +4,15 @@
   <div class="row">
     <div class="col-md-4">
 
-      <div class="card">
+      <div class="card text-center">
         <div class="card-body">
-          <h5 class="card-title">{{ (authService.user | async)?.email }}</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-          <p class="card-text">Welcome to the Trivia App, Alex. </p>
+          <h5 class="card-title">Welcome to the Trivia Host Area</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ (authService.user | async)?.email }}</h6>
+          <p>Test text</p>
+        </div>
+
+        <div class="card-body">
           <button (click)="logout()" class="btn btn-danger">Logout</button>
-          <a href="#" class="card-link">Another link</a>
         </div>
       </div>
 
@@ -18,7 +20,13 @@
 
     <div class="col-md-8">
 
-      <!-- PLACE COMPONENT DISPLAYING UPCOMING TRIVIA CLUES HERE -->
+      <div class="card text-center">
+        <div class="card-body">
+          <!-- <ul *ngFor="clue in clues | async">
+            <li (click)='removeClue(clue)'></li>
+          </ul> -->
+        </div>
+      </div>
 
     </div>
 

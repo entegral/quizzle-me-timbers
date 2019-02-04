@@ -11,7 +11,7 @@ import { Router } from '@angular/router';
 
 export class HomeComponent implements OnInit {
   email: string;
-  password: string;
+  password: string = "";
   errorMessage: string = null;
 
   constructor(public authService: AuthenticationService, public router: Router) { }
