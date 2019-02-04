@@ -2,11 +2,11 @@
   <h1>Untitled Triva Game</h1>
   <form>
     <label>Email: </label>
-    <input #input>
+    <input [(ngModel)]='email' name='email'>
     <label>Password: </label>
-    <input #password>
+    <input [(ngModel)]='password' name='password'>
     <br>
-    <button><a routerLink="host">Host log in</a></button>
+    <button (click)=login() type="submit"><a routerLink="host">Host log in</a></button>
   </form>
   <br>
   <button><a routerLink="team">Continue as Team</a></button>

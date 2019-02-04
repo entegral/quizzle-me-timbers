@@ -1,3 +1,4 @@
-<p>
-  host works!
-</p>
+
+<div *ngIf="authService.user | async"> Welcome {{ (authService.user | async)?.email }}
+
+</div>
