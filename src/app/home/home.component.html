@@ -6,7 +6,8 @@
     <label>Password: </label>
     <input [(ngModel)]='password' name='password'>
     <br>
-    <button (click)=login() type="submit"><a routerLink="host">Host log in</a></button>
+    <button (click)=login() type="submit">Host log in</button>
+    <p *ngIf="errorMessage"> <span id="error">{{ errorMessage }}</span> </p>
   </form>
   <br>
   <button><a routerLink="team">Create Team</a></button>
