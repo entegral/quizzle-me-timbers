@@ -6,10 +6,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./team.component.css']
 })
 export class TeamComponent implements OnInit {
-
+showTeamView: boolean = false;
+showTeamName: boolean = true;
   constructor() { }
 
   ngOnInit() {
+  }
+
+
+  toggleTeamView(){
+    this.showTeamView = !this.showTeamView;
+    this.showTeamName = !this.showTeamName;
   }
 
 }
