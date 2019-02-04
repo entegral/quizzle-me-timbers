@@ -1,13 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-<<<<<<< HEAD
 import { HttpModule } from '@angular/http';
-import { routing } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
 
-=======
->>>>>>> alex/daniel
 
 import { AppComponent } from './app.component';
 import { HostComponent } from './host/host.component';
@@ -44,18 +40,12 @@ export const firebaseConfig = {
   ],
   imports: [
     BrowserModule,
-<<<<<<< HEAD
     FormsModule,
     HttpModule,
     HttpClientModule,
     routing,
-=======
     AngularFireAuthModule,
-    FormsModule,
-    // HttpModule,
-    routing,
     AngularFireModule.initializeApp(firebaseConfig)
->>>>>>> alex/daniel
   ],
   providers: [],
   bootstrap: [AppComponent]
