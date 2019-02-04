@@ -41,12 +41,8 @@ export const firebaseConfig = {
     AngularFireAuthModule,
     FormsModule,
     // HttpModule,
-<<<<<<< HEAD
-    routing
-=======
     routing,
     AngularFireModule.initializeApp(firebaseConfig)
->>>>>>> auth
   ],
   providers: [],
   bootstrap: [AppComponent]
