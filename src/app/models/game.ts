@@ -14,4 +14,8 @@ export class Game {
     });
   }
 
+  addTeam(team: Team){
+    this.teams.push(team);
+  }
+
 }
