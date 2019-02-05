@@ -18,12 +18,14 @@ export class HostComponent implements OnInit {
   clues: Observable<any>;
   currentGame: Observable<any> = null;
   newGameTitle: string;
-  newGameId: string;
+  gameId: string;
   showCurrentGame: boolean = false;
 
+  displayQuestionCards: boolean = false;
+  
+
   constructor(public fb: FirebaseService, public authService: AuthenticationService, public router: Router) {
-    console.log('authService.user = ', this.authService.user);
-    this.authService.user
+    this.currentGame = this.fb.initGameObservable();
    }
 
   ngOnInit() {
@@ -36,7 +38,7 @@ export class HostComponent implements OnInit {
   }
 
   loadGame(key: string){
-    this.currentGame = this.fb.getGameByID(key);
+    this.fb.setGameById(key);
   }
 
   toggleShowCurrentGame(){
@@ -45,9 +47,9 @@ export class HostComponent implements OnInit {
 
   startNewGame(){
     let newGame = new Game(this.newGameTitle);
-    let newGameId = this.fb.addGame(newGame);
-    this.currentGame = this.fb.getGameByID(newGameId);
+    this.gameId = this.fb.addGame(newGame);
     this.toggleShowCurrentGame();
+
   }
 
 

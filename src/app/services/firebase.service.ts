@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { AngularFireDatabase, FirebaseListObservable } from 'angularfire2/database';
+import { AngularFireDatabase, FirebaseListObservable, FirebaseObjectObservable } from 'angularfire2/database';
 import { Team } from '../models/team';
 import { Game } from '../models/game';
 
@@ -7,6 +7,7 @@ import { Game } from '../models/game';
 export class FirebaseService {
 
   games: FirebaseListObservable<any[]>;
+  game: FirebaseObjectObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
   this.games = this.database.list('games');
@@ -14,11 +15,16 @@ export class FirebaseService {
 
   addGame(game: Game){
     let newGame = this.games.push(game);
+    this.setGameById(newGame.key);
     return newGame.key;
   }
 
-  getGameByID(key: string){
-    return this.database.object(`games/${key}`);
+  initGameObservable(){
+    return this.game;
+  }
+
+  setGameById(key: string){
+    this.game = this.database.object(`games/${key}`);
   }
 
 
