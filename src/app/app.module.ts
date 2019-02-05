@@ -20,9 +20,6 @@ import { FirebaseService } from './services/firebase.service';
 import { routing } from './app.routing';
 
 
-
-
-
 export const firebaseConfig = {
   apiKey: masterFirebaseConfig.apiKey,
   authDomain: masterFirebaseConfig.authDomain,

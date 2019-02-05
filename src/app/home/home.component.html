@@ -1,25 +1,33 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-10">
-      <div class="hostSignin card">
+    <div class="offset-md-3 col-md-6">
+      <div class="hostSignin card text-center">
         <div class="card-header">
           <h3>Host Sign In: </h3>
         </div>
         <div class="card-body">
           <form>
-            <label>Email: </label>
-            <input [(ngModel)]='email' name='email'><br>
-            <label>Password: </label>
-            <input [(ngModel)]='password' name='password'>
-            <br>
-            <button (click)=login() type="submit">Login</button>
+            <div class="form-group">
+              <label>Email: </label>
+              <input class="form-control" [(ngModel)]='email' name='email'><br>
+            </div>
+            <div class="form-group">
+              <label>Password: </label>
+              <input class="form-control" [(ngModel)]='password' name='password'>
+            </div>
+            <div class="form-group">
+              <button class="btn btn-dark"(click)=login() type="submit">Login</button>
+            </div>
             <p *ngIf="errorMessage"> <span id="error">{{ errorMessage }}</span> </p>
           </form>
         </div>
       </div>
     </div>
-    <div class="col-md-2">
-      <a routerLink="team"><button class="team-btn">Create Team</button></a>
+  </div>
+  <div class="row">
+    <div class="col text-center">
+      <br>
+      <a routerLink="team"><button class="btn btn-dark team-btn">Create Team</button></a>
     </div>
   </div>
 </div>
