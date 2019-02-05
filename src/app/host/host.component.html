@@ -3,10 +3,28 @@
 
 <!-- </div> -->
 <div class="container">
+
+  <div class="row" *ngIf='gameId'>
+    <div class="offset-md-3 col-md-6">
+
+      <div class="card text-center">
+        <h6 class="card-subtitle mb-2 text-muted" *ngIf='gameId'> Game Name: {{ (currentGame | async)?.title }} </h6>
+        <h6 class="card-subtitle mb-2 text-muted" *ngIf='gameId'> Game Recovery ID: {{ gameId }} </h6>
+        <h6 class="card-subtitle mb-2 text-muted" *ngIf='gameId'> Game Recovery ID: {{ gameId }} </h6>
+        <div class="card-body">
+            <h5 class="card-title">Active Question</h5>
+            <h6 class="card-subtitle mb-2 text-muted">{{ currentGame.currentQuestion | async }}</h6>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
   <div class="row">
     <div class="col-md-4">
 
       <div class="card text-center">
+        <h6 class="card-subtitle mb-2 text-muted" *ngIf='gameId'> {{ gameId }} </h6>
         <div class="card-body">
           <form >
             <h5 class="card-title">Welcome to the Trivia Host Area</h5>
@@ -27,14 +45,33 @@
 
     </div>
 
-    <div class="col-md-8">
+    <div class="col-md-4">
 
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Available Questions</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Click the + when you would like the question added to the list of displayed questions.</h6>
+          <ul *ngFor="let question of questions | async">
+            <li> <button type="button" (click)='addQuestionToQueue(question)' name="button"></button> </li>
+          </ul>
+        </div>
 
-    <!-- <div class="col" >
-      <ul>
-        <li [trivia]="triviaQuestion"></li>
-      </ul>
-    </div> -->
+      </div>
+    </div>
 
+    <div class="col-md-4">
+
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Previous Questions</h5>
+          <h6 class="card-subtitle mb-2 text-muted">Click the + when you would like the question added to the list of displayed questions.</h6>
+          <ul *ngFor="let question of questions | async">
+            <li> <button type="button" (click)='addQuestionToQueue(question)' name="button"></button> </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
 
 </div>

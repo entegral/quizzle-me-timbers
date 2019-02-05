@@ -20,7 +20,12 @@ export class FirebaseService {
   }
 
   initGameObservable(){
-    return this.game;
+    if (this.game){
+      return this.game;
+    }
+    else {
+      return null;
+    }
   }
 
   setGameById(key: string){
