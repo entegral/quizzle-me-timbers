@@ -1,7 +1,20 @@
-.afterNamed{
-
+.card-header{
+  text-align: center;
 }
 
-.beforeNamed{
-  display: show;
+.question{
+  text-align: center;
+  border: solid 2px black;
+}
+
+textarea{
+  width: 100%;
+  height: 75px;
+}
+
+.answer{
+  text-align: center;
+}
+.teamSubmitBtn{
+  float: right;
 }

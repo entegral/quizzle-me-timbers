@@ -13,22 +13,16 @@ import { ApiService } from '../services/api.service';
 })
 export class HostComponent implements OnInit {
 
-<<<<<<< HEAD
   clues: Observable<any>;
 
   constructor(public authService: AuthenticationService, public router: Router) {
-    this.clues = this.ApiService.clueList
+    // this.clues = this.ApiService.clueList
    }
-=======
-  // trivaQuestion: any[] = [];
-
-  constructor(public authService: AuthenticationService) { }
->>>>>>> alex/daniel
 
   ngOnInit() {
   }
 
-<<<<<<< HEAD
+
   logout(){
     this.authService.logout();
     this.router.navigate(['']);
@@ -37,15 +31,6 @@ export class HostComponent implements OnInit {
   removeClue(clue){
 
   }
-=======
-currentQuestion() {
 
-}
-
-questionList() {
-
-}
-
->>>>>>> alex/daniel
 
 }

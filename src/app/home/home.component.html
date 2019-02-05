@@ -1,14 +1,25 @@
 <div class="container">
-  <h3>Host Sign In: </h3>
-  <form>
-    <label>Email: </label>
-    <input [(ngModel)]='email' name='email'>
-    <label>Password: </label>
-    <input [(ngModel)]='password' name='password'>
-    <br>
-    <button (click)=login() type="submit">Host log in</button>
-    <p *ngIf="errorMessage"> <span id="error">{{ errorMessage }}</span> </p>
-  </form>
-  <br>
-  <button><a routerLink="team">Create Team</a></button>
+  <div class="row">
+    <div class="col-md-10">
+      <div class="hostSignin card">
+        <div class="card-header">
+          <h3>Host Sign In: </h3>
+        </div>
+        <div class="card-body">
+          <form>
+            <label>Email: </label>
+            <input [(ngModel)]='email' name='email'><br>
+            <label>Password: </label>
+            <input [(ngModel)]='password' name='password'>
+            <br>
+            <button (click)=login() type="submit">Login</button>
+            <p *ngIf="errorMessage"> <span id="error">{{ errorMessage }}</span> </p>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <a routerLink="team"><button class="team-btn">Create Team</button></a>
+    </div>
+  </div>
 </div>
