@@ -5,3 +5,37 @@ a:hover{
 a{
   color: black;
 }
+
+body {
+  background-color: #212121
+}
+
+.title {
+  color: lightgrey;
+  font-weight: bold;
+  font-size: 42pt;
+  margin-bottom: 50px;
+}
+
+.card-header{
+  text-align: center;
+  background-color: #424242;
+  color: lightgrey;
+}
+
+.card-footer {
+  background-color: #424242;
+}
+
+.card-body {
+  background-color: #303030;
+  color: lightgrey;
+}
+
+.card {
+  border: black;
+}
+
+.btn-dark {
+    background-color: darkorange;
+}

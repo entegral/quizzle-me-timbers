@@ -1,6 +1,8 @@
 <div class="container">
+
   <div class="teamName">
     <div class="card text-center">
+
       <div class="card-header">
         <h3>Team Setup</h3>
       </div>
@@ -53,7 +55,8 @@
       </div>
       <div class="card-footer text-center">
         <div class="teamSubmitBtn">
-          <button class="btn btn-dark" >Ready to Play!</button>
+
+          <button (click)='showGameView()' class="btn btn-dark" >Submit Team</button>
         </div>
       </div>
     </div>
@@ -62,27 +65,6 @@
 
 
 
-  <div *ngIf="showTeamView" class="teamView" >
-    <div class="card">
-      <div class="card-header">
-        <h1>Team Name HERE + Score</h1>
-      </div>
-      <div class="card-body">
-
-        <div class="question">
-          <h1>Current Question: </h1>
-          <h3>'Question HERE'</h3>
-        </div>
-
-        <h4>Answer: </h4>
-        <div class="answer">
-          <textarea #answer></textarea><br>
-          <button class="submit-btn">Submit Answer</button>
-        </div>
-      </div>
-    </div>
-
-  </div>
 
 
 </div>
