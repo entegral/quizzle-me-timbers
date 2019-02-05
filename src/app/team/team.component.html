@@ -1,44 +1,39 @@
 <div class="container">
   <div *ngIf="showTeamName" class="teamName">
-
     <div class="card">
       <div class="card-header">
         <h3>Team Set Up</h3>
       </div>
-        <div class="card-group">
-          <div class="card">
-
-    <div class="card-body">
-
-          <label>Team Name: </label><br>
-          <input #teamName>
-          <button>Select Name</button>
-          <br>
-          <h3>Current Team Members: </h3>
-          <ul>
-            <li>player 1</li>
-            <li>player 2</li>
-            <li>player 3</li>
-          </ul>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <label>Team Member's Name: </label>
-          <input #memberName>
-          <label>Team Members' Email: </label>
-          <input #memberEmail>
-          <button>Add Player</button>
-        </div>
-      </div>
-
-        </div>
-        <div class="card-footer">
-
-          <div class="teamSubmitBtn">
-            <button (click)="toggleTeamView()">Submit Team</button>
+      <div class="card-group">
+        <div class="card">
+          <div class="card-body">
+            <label>Team Name: </label><br>
+            <input #teamName>
+            <button>Select Name</button>
+            <br>
+            <h3>Current Team Members: </h3>
+            <ul>
+              <li>player 1</li>
+              <li>player 2</li>
+              <li>player 3</li>
+            </ul>
           </div>
         </div>
+        <div class="card">
+          <div class="card-body">
+            <label>Team Member's Name: </label>
+            <input #memberName>
+            <label>Team Members' Email: </label>
+            <input #memberEmail>
+            <button>Add Player</button>
+          </div>
+        </div>
+      </div>
+      <div class="card-footer">
+        <div class="teamSubmitBtn">
+          <button (click)="toggleTeamView()">Submit Team</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -46,7 +41,6 @@
 
 
   <div *ngIf="showTeamView" class="teamView" >
-
     <div class="card">
       <div class="card-header">
         <h1>Team Name HERE + Score</h1>
