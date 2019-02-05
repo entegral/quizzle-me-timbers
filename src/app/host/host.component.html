@@ -8,7 +8,8 @@
         <div class="card-body">
           <h5 class="card-title">Welcome to the Trivia Host Area</h5>
           <h6 class="card-subtitle mb-2 text-muted">{{ (authService.user | async)?.email }}</h6>
-          <p>Test text</p>
+          <input type="text" [(ngModel)]="newGameTitle">
+          <button type="button" (click)="startNewGame()" name="button">Add Game</button>
         </div>
 
         <div class="card-body">

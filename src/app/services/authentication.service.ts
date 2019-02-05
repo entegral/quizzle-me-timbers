@@ -14,7 +14,8 @@ export class AuthenticationService {
   login(email: string, password: string){
     this.afAuth.auth.signInWithEmailAndPassword(email, password)
       .then(value => {
-        console.log('Nice, login worked.');
+        console.log('Nice Alex, login worked.');
+        console.log('value = ', value)
       }).catch(err => {
         console.log('Something broke during login ', err.message)
       });

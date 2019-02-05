@@ -24,13 +24,12 @@ export class HomeComponent implements OnInit {
     this.authService.login(this.email, this.password);
     this.email = this.password = '';
 
-    let authTest: string
+    let authTest: string;
     this.authService.user.subscribe((response)=>{
-      console.log('response is ', response);
       response ? authTest = response['uid'] : null;
       console.log(authTest);
       if (response && authTest){
-        console.log('Hello Alex, welcome back.');
+        console.log('inside the if')
         this.router.navigate(['host']);
       }
       else {
