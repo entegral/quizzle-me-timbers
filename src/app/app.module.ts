@@ -15,6 +15,8 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { masterFirebaseConfig } from './api-keys';
 import { AuthenticationService } from './services/authentication.service';
+import { AngularFireDatabase } from 'angularfire2/database';
+import { FirebaseService } from './services/firebase.service';
 import { routing } from './app.routing';
 
 
@@ -40,15 +42,15 @@ export const firebaseConfig = {
   ],
   imports: [
     BrowserModule,
-
     AngularFireAuthModule,
+
     FormsModule,
     HttpModule,
     HttpClientModule,
     routing,
     AngularFireModule.initializeApp(firebaseConfig)
   ],
-  providers: [],
+  providers: [FirebaseService, AngularFireDatabase],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

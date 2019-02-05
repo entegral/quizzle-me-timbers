@@ -1,8 +1,30 @@
 
 <div *ngIf="authService.user | async"> Welcome {{ (authService.user | async)?.email }}
 
+<<<<<<< HEAD
 </div>
 <!-- <div class="container">
+=======
+  <div class="row">
+    <div class="col-md-4">
+
+      <div class="card text-center">
+        <div class="card-body">
+          <h5 class="card-title">Welcome to the Trivia Host Area</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ (authService.user | async)?.email }}</h6>
+          <input type="text" [(ngModel)]="newGameTitle">
+          <button type="button" (click)="startNewGame()" name="button">Add Game</button>
+        </div>
+
+        <div class="card-body">
+          <button (click)="logout()" class="btn btn-danger">Logout</button>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="col-md-8">
+>>>>>>> db
 
 
     <div class="col" *ngfor()>

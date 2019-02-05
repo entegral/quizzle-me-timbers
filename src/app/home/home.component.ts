@@ -12,6 +12,8 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
   email: string;
   password: string;
+  errorMessage: string;
+  
   constructor(public authService: AuthenticationService, public router: Router) { }
 
   ngOnInit() {
@@ -21,7 +23,19 @@ export class HomeComponent implements OnInit {
     console.log('email/pass ', this.email, this.password)
     this.authService.login(this.email, this.password);
     this.email = this.password = '';
-    this.router.navigate(['host']);
+    let authTest: string;
+    this.authService.user.subscribe((response)=>{
+      response ? authTest = response['uid'] : null;
+      console.log(authTest);
+      if (response && authTest){
+        console.log('inside the if')
+        this.router.navigate(['host']);
+      }
+      else {
+        this.errorMessage = "You are not authorized to host this game."
+        console.log('test failed, user not logged in');
+      }
+    });
   }
 
   logout(){
