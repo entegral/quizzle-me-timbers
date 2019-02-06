@@ -43,7 +43,7 @@
       <h5 class="card-title">Welcome to the Trivia Host Area</h5>
       <h6 class="card-subtitle mb-2 text-muted">{{ (authService.user | async)?.email }}</h6>
       <h5 *ngIf='gameId'>{{ (currentGame | async)?.title }}</h5>
-      <h6 class="card-subtitle mb-2 text-muted" *ngIf='gameId'> Game Recovery ID: {{ gameId }} </h6>
+      <h6 class="card-subtitle mb-2 text-muted" *ngIf='gameId'> Game Code: {{ gameId }} </h6>
     </div>
 
 
@@ -68,16 +68,25 @@
           <div class="card-header">
             <h3>Teams</h3>
           </div>
+
+
+          <!-- TODO: THIS IS THE REPEATING SECTION FOR LISTING TEAM ANSWERS AND SCORES -->
+
           <div class="card-body">
-            <p>SHOW TEAM NAME HERE / SCORE</p>
+            <h3>TEAM NAME</h3>
+            <p>TEAM ANSWER HERE <button class="btn btn-danger">Wrong</button> <button class="btn btn-success">Correct</button></p>
           </div>
+
+
+
+
         </div>
       </div>
 
       <div class="col-sm-5">
         <div class="card">
-          <div class="card-header">
-            <h3>Upcoming Questions</h3>
+
+            <h3 class="card-header">Upcoming Questions</h3>
             <div class="questionCard" *ngFor='let question of upcomingQuestions'>
 
               <div class="row" id='{{question.id}}'>
@@ -95,32 +104,31 @@
 
               </div>
             </div>
-          </div>
+
 
         </div>
       </div>
 
       <div class="col-sm-4">
         <div class="card">
-          <div class="card-header">
-            <h3>Current Question</h3>
-          </div>
-          <div class="card-body">
-            <p>SHOW CURRENT QUESTION HERE</p>
-          </div>
-          <div class="card-header">
-            <h3>Current Answer</h3>
-          </div>
-          <div class="card-body">
-            <p>SHOW CURRENT ANSWER HERE</p>
-          </div>
-          <div class="card">
-            <div class="card-header">
-              <h3>Teams</h3>
-            </div>
-            <div class="card-body">
-              <h3>TEAM NAME</h3>
-              <p>TEAM ANSWER HERE <button class="btn btn-danger">Wrong</button> <button class="btn btn-success">Correct</button></p>
+
+          <div *ngFor="let item of (displayQuestions | async)?.slice().reverse()">
+
+            <div class="questionCard">
+
+              <h6 class="card-header">{{ item.question }}</h6>
+
+              <div class="card-body">
+                <p>{{ item.answer }}</p>
+              </div>
+
+
+              <h6 class="card-header">Difficulty (out of 10)</h6>
+
+              <div class="card-body">
+                <p>{{ item.value / 100 }}</p>
+              </div>
+
             </div>
           </div>
         </div>

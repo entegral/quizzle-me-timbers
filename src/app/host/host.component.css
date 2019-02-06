@@ -11,11 +11,17 @@ li {
   margin-bottom: 10px;
 }
 
+.card {
+  background-color: #212121;
+
+}
+
 .questionCard {
   border: 2px solid lightgrey;
   margin: 15px;
   padding: 10px;
   border-radius: 5px;
+  background-color: #424242;
 }
 
 .questionButton {
