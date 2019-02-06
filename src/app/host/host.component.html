@@ -87,7 +87,7 @@
         <div class="card">
           <h3 class="card-header">Upcoming Questions</h3>
         </div>
-        
+
         <div class="card"  *ngFor='let question of upcomingQuestions'>
 
             <div class="questionCard" *ngIf="question">
@@ -115,6 +115,11 @@
       </div>
 
       <div class="col-sm-4">
+
+        <div class="card">
+          <h3 class="card-header">Displayed Questions</h3>
+        </div>
+
         <div class="card">
 
           <div *ngFor="let item of (displayQuestions | async)?.slice().reverse()">
