@@ -20,6 +20,8 @@ export class HostComponent implements OnInit {
   newGameTitle: string;
   gameId: string;
   showCurrentGame: boolean = false;
+  showHostView: boolean = false;
+  showGameSetUp: boolean = true;
 
   displayQuestionCards: boolean = false;
 
@@ -46,10 +48,20 @@ export class HostComponent implements OnInit {
     this.showCurrentGame = ! this.showCurrentGame;
   }
 
+  toggleShowHostView(){
+    this.showHostView = ! this.showHostView;
+  }
+
+  toggleShowGameSetUp(){
+    this.showGameSetUp = ! this.showGameSetUp;
+  }
+
   startNewGame(){
     this.gameId = this.fb.addGame(this.newGameTitle);
     this.fb.setGameById(this.gameId);
     this.toggleShowCurrentGame();
+    this.toggleShowHostView();
+    this.toggleShowGameSetUp();
     this.currentGame = this.fb.initComponentWithGameObservable();
 
   }
