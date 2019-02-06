@@ -5,3 +5,8 @@
 li {
   color: lightgrey;
 }
+
+.bottom-buttons{
+  float: right;
+  margin-bottom: 10px;
+}

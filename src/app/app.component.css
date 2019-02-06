@@ -1,10 +1,14 @@
+
+
 .logo{
   text-align: center;
-  margin: 10px;
+  padding: 0px;
+  margin-left: 5% !important;
+  margin-right: 5% !important;
 }
 
 img{
-  width: 1250px;
+width: 90%;
 
 }
 
