@@ -19,3 +19,11 @@ textarea{
 .game-key{
   margin: 10px;
 }
+
+.card-footer{
+  text-align: center;
+}
+.small{
+  width: 75%;
+  margin-left: 12%;
+}

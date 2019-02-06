@@ -1,74 +1,58 @@
 <div class="container">
-<div class="row">
-  <div class="offset-md-3 col-md-5">
+  <div class="row">
+    <div class="offset-md-4 col-md-4">
 
-  <div class="game-key">
-    <div class="card">
-      <div class="card-header">
-        <h3>Game Key</h3>
-      </div>
-      <div class="card-body">
-        <input class="form-control"type="text" name="">
-      </div>
-      <div class="card-footer">
-        <button class="btn btn-dark" name="button">join Game</button>
+      <div class="game-key">
+        <div class="card">
+          <div class="card-header">
+            <h3>Game Key</h3>
+          </div>
+          <div class="card-body">
+            <input class="form-control"type="text" name="">
+          </div>
+          <div class="card-footer">
+            <button class="btn btn-dark">join Game</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-
-</div>
-
-
-
-
 
 
   <div class="teamName">
     <div class="card text-center">
-
       <div class="card-header">
         <h3>Team Setup</h3>
       </div>
-
-
-        <div class="card">
-          <div class="card-body">
-
-            <div *ngIf="teamNameSelected">
-              <h5 class="card-title"> {{ teamName }} <button class="btn btn-sm btn-dark" (click)='toggleEditTeamName()'>Edit</button> </h5>
-            </div>
-
-            <div *ngIf="!teamNameSelected">
-              <form>
-                <div class="form-group">
-                  <label>Team Name: </label><br>
-                  <input [(ngModel)]='teamName' name='teamName' class="form-control">
-                </div>
-                <div class="form-group">
-                  <button class="btn btn-dark" (click)='toggleEditTeamName()'>Enter</button>
-                </div>
-              </form>
-            </div>
-
+      <div class="card">
+        <div class="card-body">
+          <div *ngIf="teamNameSelected">
+            <h5 class="card-title"> {{ teamName }} <button class="btn btn-sm btn-dark" (click)='toggleEditTeamName()'>Edit</button> </h5>
+          </div>
+          <div *ngIf="!teamNameSelected">
+            <form>
+              <div class="form-group">
+                <label>Team Name: </label><br>
+                <input [(ngModel)]='teamName' name='teamName' class="form-control small">
+              </div>
+              <div class="form-group">
+                <button class="btn btn-dark" (click)='toggleEditTeamName()'>Enter</button>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
 
 
       <div class="card">
-        <div class="card-body">
-        </div>
       </div>
-
-    <div class="card-footer text-center">
-      <div class="teamSubmitBtn">
-
-        <button (click)='showGameView()' class="btn btn-dark" >Submit Team</button>
+      <div class="card-footer text-center">
+        <div class="teamSubmitBtn">
+          <button (click)='showGameView()' class="btn btn-dark" >Submit Team</button>
+        </div>
       </div>
     </div>
   </div>
-</div>
 
 
 </div>
