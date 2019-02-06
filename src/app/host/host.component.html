@@ -4,74 +4,121 @@
 <!-- </div> -->
 <div class="container">
 
-  <div class="row" *ngIf='gameId'>
-    <div class="offset-md-3 col-md-6">
+  <!-- <div class="row" *ngIf='gameId'>
+  <div class="offset-md-3 col-md-6">
 
-      <div class="card text-center">
-        <h6 class="card-subtitle mb-2 text-muted" *ngIf='gameId'> Game Name: {{ (currentGame | async)?.title }} </h6>
-        <h6 class="card-subtitle mb-2 text-muted" *ngIf='gameId'> Game Recovery ID: {{ gameId }} </h6>
-        <h6 class="card-subtitle mb-2 text-muted" *ngIf='gameId'> Game Recovery ID: {{ gameId }} </h6>
-        <div class="card-body">
-            <h5 class="card-title">Active Question</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{ currentGame.currentQuestion | async }}</h6>
-        </div>
+  <div class="card-header text-center">
+  <h3 class="" *ngIf='gameId'>{{ (currentGame | async)?.title }} </h3>
+</div>
+<div class="card-body">
+<h6 class="card-subtitle mb-2 text-muted" *ngIf='gameId'> Game Recovery ID: {{ gameId }} </h6>
+</div>
+</div>
+</div> -->
+
+<div class="card-header">
+  <h5 class="card-title">Welcome to the Trivia Host Area</h5>
+  <h6 class="card-subtitle mb-2 text-muted">{{ (authService.user | async)?.email }}</h6>
+  <h5 *ngIf='gameId'>{{ (currentGame | async)?.title }}</h5>
+  <h6 class="card-subtitle mb-2 text-muted" *ngIf='gameId'> Game Recovery ID: {{ gameId }} </h6>
+</div>
+<div class="card-body">
+
+
+
+<button (click)="logout()" class="btn btn-dark">Logout</button>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="row">
+  <div class="col-md-4">
+
+    <div class="card text-center">
+      <div class="card-body">
+        <form >
+          <!-- <h5 class="card-title">Welcome to the Trivia Host Area</h5>
+          <h6 class="card-subtitle mb-2 text-muted">{{ (authService.user | async)?.email }}</h6> -->
+          <div class="form-group">
+            <input class="form-control" type="text" [(ngModel)]="newGameTitle" name="newGameTitle">
+          </div>
+          <div class="form-group">
+            <button class="btn btn-dark" type="button" (click)="startNewGame()" name="button">Add Game</button>
+          </div>
+        </form>
+      </div>
+
+      <div class="card-body">
+        <button (click)="logout()" class="btn btn-dark">Logout</button>
       </div>
     </div>
+
   </div>
 
+  <!-- <div class="col-md-4">
 
-  <div class="row">
-    <div class="col-md-4">
+  <div class="card text-center">
+  <div class="card-body">
+  <h5 class="card-title">Available Questions</h5>
+  <h6 class="card-subtitle mb-2 text-muted">Click the + when you would like the question added to the list of displayed questions.</h6>
+  <ul *ngFor="let question of questions | async">
+  <li> <button type="button" (click)='addQuestionToQueue(question)' name="button"></button> </li>
+</ul>
+</div>
 
-      <div class="card text-center">
-        <h6 class="card-subtitle mb-2 text-muted" *ngIf='gameId'> {{ gameId }} </h6>
-        <div class="card-body">
-          <form >
-            <h5 class="card-title">Welcome to the Trivia Host Area</h5>
-            <h6 class="card-subtitle mb-2 text-muted">{{ (authService.user | async)?.email }}</h6>
-            <div class="form-group">
-              <input class="form-control" type="text" [(ngModel)]="newGameTitle" name="newGameTitle">
-            </div>
-            <div class="form-group">
-              <button class="btn btn-dark" type="button" (click)="startNewGame()" name="button">Add Game</button>
-            </div>
-          </form>
-        </div>
+</div>
+</div>
 
-        <div class="card-body">
-          <button (click)="logout()" class="btn btn-dark">Logout</button>
-        </div>
-      </div>
+<div class="col-md-4">
 
-    </div>
+<div class="card text-center">
+<div class="card-body">
+<h5 class="card-title">Previous Questions</h5>
+<h6 class="card-subtitle mb-2 text-muted">Click the + when you would like the question added to the list of displayed questions.</h6>
+<ul *ngFor="let question of questions | async">
+<li> <button type="button" (click)='addQuestionToQueue(question)' name="button"></button> </li>
+</ul>
+</div>
 
-    <div class="col-md-4">
+</div>
+</div> -->
+</div>
 
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="card-title">Available Questions</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Click the + when you would like the question added to the list of displayed questions.</h6>
-          <ul *ngFor="let question of questions | async">
-            <li> <button type="button" (click)='addQuestionToQueue(question)' name="button"></button> </li>
-          </ul>
-        </div>
 
-      </div>
-    </div>
 
-    <div class="col-md-4">
 
-      <div class="card text-center">
-        <div class="card-body">
-          <h5 class="card-title">Previous Questions</h5>
-          <h6 class="card-subtitle mb-2 text-muted">Click the + when you would like the question added to the list of displayed questions.</h6>
-          <ul *ngFor="let question of questions | async">
-            <li> <button type="button" (click)='addQuestionToQueue(question)' name="button"></button> </li>
-          </ul>
-        </div>
 
-      </div>
-    </div>
-  </div>
+
+
+
+
+
+
+
+
+
+
 
 </div>
