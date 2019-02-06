@@ -35,15 +35,12 @@ export class HostComponent implements OnInit {
   }
 
   addToQuestionList(question) {
-    let index = null;
     this.displayQuestions.push(question);
-    index = this.upcomingQuestions.indexOf(question);
-    delete this.upcomingQuestions[index];
-    console.log(index, this.displayQuestions);
+    delete this.upcomingQuestions[this.upcomingQuestions.indexOf(question)];
   }
 
   deleteQuestion(question){
-
+    delete this.upcomingQuestions[this.upcomingQuestions.indexOf(question)];
   }
 
 
