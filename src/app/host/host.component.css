@@ -1,3 +1,7 @@
 .card-body{
   text-align: center;
 }
+
+li {
+  color: lightgrey;
+}

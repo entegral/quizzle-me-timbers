@@ -25,10 +25,10 @@
   <div id="all-questions">
     <ul *ngFor='let question of upcomingQuestions'>
       <li id='{{question.id}}'>
-        <h3>Q: {{question.question}}</h3>
+        <h6> <button (click)='addToQuestionList(question); ' class="btn btn-dark">+</button>
+        <button (click)='deleteQuestion(question)' class="btn btn-dark">X</button> Q: {{question.question}} </h6>
         <p>A: {{question.answer}}</p>
-        <button (click)='addToQuestionList(question); '>Add to Queue</button>
-        <button (click)='deleteQuestion(question)'>Remove Question</button>
+
       </li>
     </ul>
   </div>

@@ -30,7 +30,7 @@ export class FirebaseService {
     return dbGame.key;
   }
 
-  addDisplayQuestionList(gameId: string, question: Object){
+  addDisplayQuestionToList(gameId: string, question: Object){
     let newQuestion = this.displayQuestions.push(question);
     this.localDisplayQuestions.push(newQuestion.key);
     this.updateDisplayQuestionList(gameId);
