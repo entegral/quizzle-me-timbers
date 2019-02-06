@@ -38,7 +38,7 @@ export class HostComponent implements OnInit {
 
   loadGame(key: string){
     this.fb.setGameById(key);
-    this.currentGame = this.fb.initGameObservable();
+    this.currentGame = this.fb.initComponentWithGameObservable();
 
   }
 
@@ -47,11 +47,10 @@ export class HostComponent implements OnInit {
   }
 
   startNewGame(){
-    let newGame = new Game(this.newGameTitle);
-    this.gameId = this.fb.addGame(newGame);
+    this.gameId = this.fb.addGame(this.newGameTitle);
     this.fb.setGameById(this.gameId);
     this.toggleShowCurrentGame();
-    this.currentGame = this.fb.initGameObservable();
+    this.currentGame = this.fb.initComponentWithGameObservable();
 
   }
 

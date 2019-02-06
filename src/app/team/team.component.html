@@ -1,10 +1,16 @@
 <div class="container">
 
   <div class="teamName">
+
+    <div>
+      <input type="text" [(ngModel)]='gameId' placeholder="JoinGame" name="gameId">
+      <button class="btn btn-dark" type="button" (click)='joinGame()' name="button">Join Game</button>
+    </div>
+
     <div class="card text-center">
 
-      <div class="card-header">
-        <h3>Team Setup</h3>
+      <div *ngIf="currentGame" class="card-header">
+        <h3>Team Setup {{ (currentGame | async)?.title }} </h3>
       </div>
       <div class="card-group">
 
@@ -56,7 +62,7 @@
       <div class="card-footer text-center">
         <div class="teamSubmitBtn">
 
-          <button (click)='showGameView()' class="btn btn-dark" >Submit Team</button>
+          <button (click)='addTeamToGame()' class="btn btn-dark" >Submit Team</button>
         </div>
       </div>
     </div>
