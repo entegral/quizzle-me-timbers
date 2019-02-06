@@ -85,24 +85,29 @@
 
       <div class="col-sm-5">
         <div class="card">
+          <h3 class="card-header">Upcoming Questions</h3>
+        </div>
+        
+        <div class="card"  *ngFor='let question of upcomingQuestions'>
 
-            <h3 class="card-header">Upcoming Questions</h3>
-            <div class="questionCard" *ngFor='let question of upcomingQuestions'>
+            <div class="questionCard" *ngIf="question">
 
-              <div class="row" id='{{question.id}}'>
-                <div class="col-md-2">
-                  <button (click)='deleteQuestion(question)' class="btn btn-dark btn-sm questionButton">x</button>
-                  <br>
-                  <button (click)='addToQuestionList(question); ' class="btn btn-success btn-sm questionButton">+</button>
+
+                <div class="row" id='{{question.id}}'>
+                  <div class="col-md-2">
+                    <button (click)='deleteQuestion(question)' class="btn btn-dark btn-sm questionButton">x</button>
+                    <br>
+                    <button (click)='addToQuestionList(question); ' class="btn btn-success btn-sm questionButton">+</button>
+
+                  </div>
+
+                  <div class="col-md-10">
+                    <h6> Q: {{question.question}} </h6>
+                    <p>A: {{question.answer}}</p>
+                  </div>
 
                 </div>
 
-                <div class="col-md-10">
-                  <h6> Q: {{question.question}} </h6>
-                  <p>A: {{question.answer}}</p>
-                </div>
-
-              </div>
             </div>
 
 

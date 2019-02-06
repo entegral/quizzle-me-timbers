@@ -15,15 +15,19 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class HostComponent implements OnInit {
 
+  // Question related variables and observables
   upcomingQuestions: Object[] = [];
-  displayQuestions: Object[] = [];
+  displayQuestions: Observable<any[]>;
+
+  // Game related variables and observables
   currentGame: Observable<any> = null;
   newGameTitle: string;
   gameId: string;
+
+  // HTML displaying variables
   showCurrentGame: boolean = false;
   showHostView: boolean = false;
   showGameSetUp: boolean = true;
-
   displayQuestionCards: boolean = false;
 
 
@@ -43,10 +47,11 @@ export class HostComponent implements OnInit {
     // delete this.upcomingQuestions[index];
     // console.log(index, this.displayQuestions);
     this.fb.addDisplayQuestionToList(this.gameId, question);
+    this.deleteQuestion(question);
   }
 
   deleteQuestion(question){
-
+    delete this.upcomingQuestions[this.upcomingQuestions.indexOf(question)];
   }
 
 
@@ -58,6 +63,7 @@ export class HostComponent implements OnInit {
   loadGame(){
     this.fb.setGameById(this.newGameTitle);
     this.currentGame = this.fb.initComponentWithGameObservable();
+    this.displayQuestions = this.fb.displayQuestions;
     this.gameId = this.newGameTitle;
     this.toggleShowCurrentGame();
     this.toggleShowHostView();
