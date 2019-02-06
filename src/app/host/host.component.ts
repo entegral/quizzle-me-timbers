@@ -15,7 +15,8 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class HostComponent implements OnInit {
 
-  clues: Observable<any>;
+  upcomingQuestions: Object[] = [];
+  displayQuestions: Object[] = [];
   currentGame: Observable<any> = null;
   newGameTitle: string;
   gameId: string;
@@ -24,10 +25,25 @@ export class HostComponent implements OnInit {
   displayQuestionCards: boolean = false;
 
 
-  constructor(public fb: FirebaseService, public authService: AuthenticationService, public router: Router) {
+  constructor(public fb: FirebaseService, public authService: AuthenticationService, public router: Router, public api: ApiService) {
    }
 
   ngOnInit() {
+    this.api.clueList.subscribe((response) => {
+      this.upcomingQuestions = response;
+    });
+  }
+
+  addToQuestionList(question) {
+    let index = null;
+    this.displayQuestions.push(question);
+    index = this.upcomingQuestions.indexOf(question);
+    delete this.upcomingQuestions[index];
+    console.log(index, this.displayQuestions);
+  }
+
+  deleteQuestion(question){
+
   }
 
 
