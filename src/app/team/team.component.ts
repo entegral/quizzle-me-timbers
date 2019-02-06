@@ -3,6 +3,7 @@ import { Player } from '../models/player';
 import { FirebaseService } from '../services/firebase.service';
 import { Game } from '../models/game';
 import { Team } from '../models/team';
+import { Observable } from 'rxjs/Observable';
 
 @Component({
   selector: 'app-team',
@@ -15,11 +16,8 @@ export class TeamComponent implements OnInit {
   teamName: string;
   currentTeam: Team;
 
-  memberEmail: string = '';
-  memberName: string = '';
-  memberList: Player[] = [];
-
-  currentGame: Game;
+  currentGame: Observable<any> = null;
+  gameId: string;
   displayGameView: boolean = false;
 
   constructor(public fb: FirebaseService) {
@@ -30,24 +28,20 @@ export class TeamComponent implements OnInit {
   }
 
   addTeamToGame(){
-    this.currentTeam = new Team(this.teamName, this.memberList);
-    this.currentGame.addTeam(this.currentTeam);
+    this.currentTeam = new Team(this.teamName);
+    console.log('currentTeam ',this.currentTeam);
+    console.log('teamName ',this.teamName);
+    this.fb.addTeam(this.gameId, this.currentTeam);
+    this.showGameView();
   }
 
   toggleEditTeamName(){
     this.teamNameSelected = !this.teamNameSelected;
   }
 
-  addMemberToList(){
-    this.memberList.push(new Player(this.memberName, this.memberEmail));
-    console.log(this.memberList);
-    this.memberEmail = '';
-    this.memberName = '';
-  }
-
-  removeMemberFromList(member: Player){
-    const index: number = this.memberList.indexOf(member);
-    this.memberList.splice(index, 1);
+  joinGame(){
+    this.fb.setGameById(this.gameId);
+    this.currentGame = this.fb.initComponentWithGameObservable();
   }
 
   showGameView(){

@@ -2,7 +2,20 @@
   <div class="row">
     <div class="offset-md-4 col-md-4">
 
-      <div class="game-key">
+  <div class="teamName">
+
+    <div>
+      <input type="text" [(ngModel)]='gameId' placeholder="JoinGame" name="gameId">
+      <button class="btn btn-dark" type="button" (click)='joinGame()' name="button">Join Game</button>
+    </div>
+
+    <div class="card text-center">
+
+      <div *ngIf="currentGame" class="card-header">
+        <h3>Team Setup {{ (currentGame | async)?.title }} </h3>
+      </div>
+      <div class="card-group">
+
         <div class="card">
           <div class="card-header">
             <h3>Game Key</h3>
@@ -48,7 +61,8 @@
       </div>
       <div class="card-footer text-center">
         <div class="teamSubmitBtn">
-          <button (click)='showGameView()' class="btn btn-dark" >Submit Team</button>
+
+          <button (click)='addTeamToGame()' class="btn btn-dark" >Submit Team</button>
         </div>
       </div>
     </div>
