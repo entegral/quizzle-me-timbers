@@ -10,3 +10,14 @@ li {
   float: right;
   margin-bottom: 10px;
 }
+
+.questionCard {
+  border: 2px solid lightgrey;
+  margin: 15px;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.questionButton {
+  margin: 0px 0px 20px 0px;
+}

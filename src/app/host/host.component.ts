@@ -55,10 +55,13 @@ export class HostComponent implements OnInit {
     this.router.navigate(['']);
   }
 
-  loadGame(key: string){
-    this.fb.setGameById(key);
+  loadGame(){
+    this.fb.setGameById(this.newGameTitle);
     this.currentGame = this.fb.initComponentWithGameObservable();
-
+    this.gameId = this.newGameTitle;
+    this.toggleShowCurrentGame();
+    this.toggleShowHostView();
+    this.toggleShowGameSetUp();
   }
 
   toggleShowCurrentGame(){
