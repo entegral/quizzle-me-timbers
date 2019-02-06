@@ -85,10 +85,11 @@ export class HostComponent implements OnInit {
   startNewGame(){
     this.gameId = this.fb.addGame(this.newGameTitle);
     this.fb.setGameById(this.gameId);
+    this.currentGame = this.fb.initComponentWithGameObservable();
+    this.displayQuestions = this.fb.displayQuestions;
     this.toggleShowCurrentGame();
     this.toggleShowHostView();
     this.toggleShowGameSetUp();
-    this.currentGame = this.fb.initComponentWithGameObservable();
 
   }
 

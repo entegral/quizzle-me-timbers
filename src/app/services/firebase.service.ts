@@ -18,7 +18,7 @@ export class FirebaseService {
   constructor(private database: AngularFireDatabase) {
   this.games = this.database.list('games');
   this.teams = this.database.list('teams');
-  this.displayQuestions = this.database.list('displayQuestions');
+
   this.answeredQuestions = this.database.list('games/answered');
   }
 
@@ -31,11 +31,18 @@ export class FirebaseService {
   }
 
   addDisplayQuestionToList(gameId: string, question: Object){
+    question['gameId'] = gameId;
     let newQuestion = this.displayQuestions.push(question);
     this.localDisplayQuestions.push(newQuestion.key);
     this.updateDisplayQuestionList(gameId);
     return newQuestion.key;
     }
+
+
+
+  getQuestionById(key: string){
+    return this.database.object(`displayQuestions/${key}`);
+  }
 
   updateDisplayQuestionList(gameId: string){
     let gameDbCon = this.getGameById(gameId);
@@ -80,6 +87,7 @@ export class FirebaseService {
 
   setGameById(key: string) {
     this.game = this.database.object(`games/${key}`);
+    this.displayQuestions = this.database.list(`displayQuestions/${key}`);
   }
 
   getGameById(key: string) {

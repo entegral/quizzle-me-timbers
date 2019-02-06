@@ -18,7 +18,7 @@ import { AuthenticationService } from './services/authentication.service';
 import { AngularFireDatabase } from 'angularfire2/database';
 import { FirebaseService } from './services/firebase.service';
 import { routing } from './app.routing';
-import { DisplayQuestionsComponent } from './display-questions/display-questions.component';
+
 
 
 export const firebaseConfig = {
@@ -36,8 +36,7 @@ export const firebaseConfig = {
     AppComponent,
     HostComponent,
     TeamComponent,
-    HomeComponent,
-    DisplayQuestionsComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
