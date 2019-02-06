@@ -13,7 +13,8 @@ export class HomeComponent implements OnInit {
   email: string;
   password: string;
   errorMessage: string;
-  
+  displayHostLogin: boolean = false;
+
   constructor(public authService: AuthenticationService, public router: Router) { }
 
   ngOnInit() {
@@ -40,6 +41,10 @@ export class HomeComponent implements OnInit {
 
   logout(){
     this.authService.logout();
+  }
+
+  showHostLogin(){
+    this.displayHostLogin = !this.displayHostLogin;
   }
 
 
