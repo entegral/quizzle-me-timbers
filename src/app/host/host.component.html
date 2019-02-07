@@ -1,62 +1,41 @@
-<div class="container">
-  <div class="gameSetUp" *ngIf='showGameSetUp'>
-
-
+<div class="container text-center">
+  <div class="content-box gameSetUp" *ngIf='showGameSetUp'>
     <div class="row">
-      <div class="offset-sm-4 col-sm-4">
-
-        <div class="card text-center">
-          <div class="card-body">
-            <form>
-              <h5 class="card-title">Welcome to the Trivia Host Area</h5>
-              <h6 class="card-subtitle mb-2 text-muted">{{ (authService.user | async)?.email }}</h6>
-              <div class="form-group">
-                <input class="form-control" type="text" [(ngModel)]="newGameTitle" name="newGameTitle">
-              </div>
-              <div class="form-group">
-                <button class="btn btn-dark" type="button" (click)="startNewGame()" name="button">Start New Game</button>
-              </div>
-              <div class="form-group">
-                <button class="btn btn-dark" type="button" (click)="loadGame()" name="button">Load Game</button>
-              </div>
-            </form>
-          </div>
-
-        </div>
-
-      </div>
-
+      <h5 class="card-title">Welcome back, {{ (authService.user | async)?.email }}</h5>
+      <input id="game-title" class="form-control" type="text" [(ngModel)]="newGameTitle" name="newGameTitle" placeholder="Game Title">
+        <button id="new-game" class="btn btn-dark" type="button" (click)="startNewGame()" name="button">New Game</button>
+        <button id="load-game" class="btn btn-dark" type="button" (click)="loadGame()" name="button">Load Game</button>
     </div>
-
-
   </div>
 
-
-
-
   <div class="hostView" *ngIf='showHostView'>
-
-    <div class="card-header">
-
-      <h5 *ngIf='gameId'>{{ (currentGame | async)?.title }} <button (click)="logout()" class="btn btn-dark logOut">Logout</button></h5>
-      <h6 class="card-subtitle mb-2 text-muted" *ngIf='gameId'> Game Code: {{ gameId }} </h6>
-
+    <div class="row">
+      <button id="logout" (click)="logout()" class="btn btn-dark logOut">Logout</button>
+    </div>
+    <div class="row">
+      <div class="small-content-box">
+        <h5 *ngIf='gameId'>{{ (currentGame | async)?.title }} </h5>
+        <h6 class="card-subtitle mb-2 text-muted" *ngIf='gameId'> Game Code: {{ gameId }} </h6>
+      </div>
     </div>
 
 
 
     <div id="question-queue">
       <ul *ngFor='let question of displayQuestions'>
-        <h3>Q: {{question.question}}</h3>
-        <p>A: {{question.correct_answer}}</p>
+        <div class="small-content-box">
+          <h3>Q: {{question.question}}</h3>
+          <p>A: {{question.correct_answer}}</p>
+
+        </div>
       </ul>
     </div>
 
 
 
 
-
     <div class="row">
+
 
       <div class="col-sm-3">
         <div class="card">
@@ -110,9 +89,7 @@
 
       </div>
 
-      <div class="col-sm-4">
-
-        <div class="card">
+      <div class="col-4">
           <h3 class="card-header">Displayed Questions</h3>
         </div>
 
@@ -140,11 +117,9 @@
               </div>
 
 
-              <h6 class="card-header">Difficulty </h6>
+              <h6 class="card-header">Difficulty: {{ item.difficulty }}</h6>
 
-              <div class="card-body">
-                <p>{{ item.difficulty }}</p>
-              </div>
+
 
             </div>
 
@@ -153,5 +128,4 @@
       </div>
     </div>
 
-  </div>
 </div>
