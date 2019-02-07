@@ -6,6 +6,8 @@ import { Game } from '../models/game';
 @Injectable()
 export class FirebaseService {
 
+  displayQuestions: FirebaseListObservable<any[]>;
+  localDisplayQuestions: string[] = [];
   games: FirebaseListObservable<any[]>;
   teams: FirebaseListObservable<any[]>;
   answeredQuestions: FirebaseListObservable<any[]>;
@@ -14,9 +16,10 @@ export class FirebaseService {
   game: FirebaseObjectObservable<any[]>;
 
   constructor(private database: AngularFireDatabase) {
-    this.games = this.database.list('games');
-    this.teams = this.database.list('teams');
-    this.answeredQuestions = this.database.list('games/answered');
+  this.games = this.database.list('games');
+  this.teams = this.database.list('teams');
+
+  this.answeredQuestions = this.database.list('games/answered');
   }
 
   addGame(title: string) {
@@ -25,6 +28,25 @@ export class FirebaseService {
     let dbGame = this.games.push(newGame);
     this.setGameById(dbGame.key);
     return dbGame.key;
+  }
+
+  addDisplayQuestionToList(gameId: string, question: Object){
+    question['gameId'] = gameId;
+    let newQuestion = this.displayQuestions.push(question);
+    this.localDisplayQuestions.push(newQuestion.key);
+    this.updateDisplayQuestionList(gameId);
+    return newQuestion.key;
+    }
+
+
+
+  getQuestionById(key: string){
+    return this.database.object(`displayQuestions/${key}`);
+  }
+
+  updateDisplayQuestionList(gameId: string){
+    let gameDbCon = this.getGameById(gameId);
+    gameDbCon.update({displayQuestions: this.localDisplayQuestions});
   }
 
   addTeam(gameId: string, team: Team) {
@@ -65,6 +87,7 @@ export class FirebaseService {
 
   setGameById(key: string) {
     this.game = this.database.object(`games/${key}`);
+    this.displayQuestions = this.database.list(`displayQuestions/${key}`);
   }
 
   getGameById(key: string) {
