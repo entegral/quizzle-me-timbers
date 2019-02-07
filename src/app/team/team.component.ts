@@ -21,8 +21,7 @@ export class TeamComponent implements OnInit {
   displayQuestions: Observable<any[]>;
 
 
-  displayGameView: boolean = false;
-  displayTeamSelectionCard: boolean = false;
+  displayTeamView: boolean = false;
   gameKeyView: boolean = true;
   gameplayView: boolean = false;
 
@@ -38,7 +37,6 @@ export class TeamComponent implements OnInit {
     console.log('currentTeam ',this.currentTeam);
     console.log('teamName ',this.teamName);
     this.fb.addTeam(this.gameId, this.currentTeam);
-    this.showGameView();
     this.hideSetup();
   }
 
@@ -49,20 +47,16 @@ export class TeamComponent implements OnInit {
   joinGame(){
     this.fb.setGameById(this.gameId);
     this.currentGame = this.fb.initComponentWithGameObservable();
-    if (this.currentGame){
-      this.displayTeamSelectionCard = true;
-      this.displayQuestions = this.fb.displayQuestions;
-
-    }
+    console.log('game: ', this.currentGame);
+    this.displayTeamView = true;
+    console.log(this.fb.displayQuestions);
+    this.displayQuestions = this.fb.displayQuestions;
+    
   }
 
-  showGameView(){
-    this.displayGameView = true;
-  }
 
   hideSetup(){
-    this.displayTeamSelectionCard = false;
-    this.gameKeyView = false;
+    this.displayTeamView = false;
     this.gameplayView = true;
 
   }
