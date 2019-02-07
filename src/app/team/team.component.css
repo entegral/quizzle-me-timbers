@@ -2,13 +2,24 @@
   margin: auto;
   margin-top: 15%;
   width: 50%;
-  background-color: #41414186;
-  border: 0px solid black;
-  border-radius: 20px;
-  padding-top: 2.5%;
-  padding-bottom: 2.5%;
-  padding-left: 5%;
-  padding-right: 5%;
+}
+
+.current-game{
+  height: 100%;
+}
+
+h3{
+  color: white;
+}
+
+.content-box{
+background-color: #41414186;
+border: 0px solid black;
+border-radius: 20px;
+padding-top: 2.5%;
+padding-bottom: 2.5%;
+padding-left: 5%;
+padding-right: 5%;
 }
 
 .gamekey{
@@ -27,6 +38,7 @@
   margin-left: 10%;
   margin-right: 10%;
   margin-bottom: 5%;
+  margin-top: 5%;
   padding: 5%;
   border-radius: .25rem;
 }
@@ -36,23 +48,23 @@
   font-size: 1.5rem;
   padding: 15px;
   margin: 30px;
+  margin-bottom: 5%;
   width: 80%;
 }
 
+.btn-group{
+  width: 100%;
+}
+
 #team-name {
-  width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 5%;
-  padding: 5%;
   border-radius: .25rem;
   background: white;
-  border-radius: .25rem;
 }
 
 #edit-button {
   width: 50%;
   margin-right: 0px;
+  border-right: 1px solid grey;
 
 }
 
@@ -60,36 +72,3 @@
   width: 50%;
   margin-left: 0px;
 }
-
-/* .teamName{
-  margin-top: 50px;
-}
-
-.question{
-  text-align: center;
-  border: solid 2px black;
-}
-
-textarea{
-  width: 100%;
-  height: 75px;
-}
-
-.answer{
-  text-align: center;
-}
-.game-key{
-  margin: 10px;
-}
-
-.card-footer{
-  text-align: center;
-}
-.small{
-  width: 75%;
-  margin-left: 12%;
-}
-
-.logo{
-  width:350px;
-} */
