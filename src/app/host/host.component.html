@@ -8,7 +8,7 @@
 
         <div class="card text-center">
           <div class="card-body">
-            <form >
+            <form>
               <h5 class="card-title">Welcome to the Trivia Host Area</h5>
               <h6 class="card-subtitle mb-2 text-muted">{{ (authService.user | async)?.email }}</h6>
               <div class="form-group">
@@ -23,9 +23,6 @@
             </form>
           </div>
 
-          <div class="card-body">
-            <button (click)="logout()" class="btn btn-dark">Logout</button>
-          </div>
         </div>
 
       </div>
@@ -40,10 +37,10 @@
   <div class="hostView" *ngIf='showHostView'>
 
     <div class="card-header">
-      <h5 class="card-title">Welcome to the Trivia Host Area</h5>
-      <h6 class="card-subtitle mb-2 text-muted">{{ (authService.user | async)?.email }}</h6>
-      <h5 *ngIf='gameId'>{{ (currentGame | async)?.title }}</h5>
+
+      <h5 *ngIf='gameId'>{{ (currentGame | async)?.title }} <button (click)="logout()" class="btn btn-dark logOut">Logout</button></h5>
       <h6 class="card-subtitle mb-2 text-muted" *ngIf='gameId'> Game Code: {{ gameId }} </h6>
+
     </div>
 
 
@@ -55,9 +52,7 @@
       </ul>
     </div>
 
-    <div class="card-body">
-      <button (click)="logout()" class="btn btn-dark">Logout</button>
-    </div>
+
 
 
 
@@ -94,14 +89,14 @@
 
 
                 <div class="row" id='{{question.id}}'>
-                  <div class="col-md-2">
+                  <div class="col-md-1">
                     <button (click)='deleteQuestion(question)' class="btn btn-dark btn-sm questionButton">x</button>
                     <br>
                     <button (click)='addToQuestionList(question); ' class="btn btn-success btn-sm questionButton">+</button>
 
                   </div>
 
-                  <div class="col-md-10">
+                  <div class="col-md-11">
                     <h6> Q: {{question.question}} </h6>
                     <p>A: {{question.answer}}</p>
                   </div>
@@ -146,9 +141,6 @@
 
     </div>
 
-    <div class="bottom-buttons">
-      <button (click)="logout()" class="btn btn-dark">Logout</button>
-    </div>
 
   </div>
 
