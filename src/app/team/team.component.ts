@@ -18,6 +18,9 @@ export class TeamComponent implements OnInit {
 
   currentGame: Observable<any> = null;
   gameId: string;
+  displayQuestions: Observable<any[]>;
+
+
   displayGameView: boolean = false;
   displayTeamSelectionCard: boolean = false;
   gameKeyView: boolean = true;
@@ -48,6 +51,8 @@ export class TeamComponent implements OnInit {
     this.currentGame = this.fb.initComponentWithGameObservable();
     if (this.currentGame){
       this.displayTeamSelectionCard = true;
+      this.displayQuestions = this.fb.displayQuestions;
+
     }
   }
 
@@ -59,6 +64,6 @@ export class TeamComponent implements OnInit {
     this.displayTeamSelectionCard = false;
     this.gameKeyView = false;
     this.gameplayView = true;
-    
+
   }
 }

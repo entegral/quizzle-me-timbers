@@ -71,7 +71,7 @@
                 </div>
               </div>
             </div>
-            
+
           </div>
         </div>
       </div>
@@ -81,7 +81,7 @@
   <div *ngIf="gameplayView">
 
     <div class="card">
-      <h3 class="card-header">Displayed Questions</h3>
+      <h3 class="card-header">Questions</h3>
     </div>
 
     <div class="card">
@@ -89,20 +89,8 @@
       <div *ngFor="let item of (displayQuestions | async)?.slice().reverse()">
 
         <div class="questionCard">
-
           <h6 class="card-header">{{ item.question }}</h6>
-
-          <div class="card-body">
-            <p>{{ item.answer }}</p>
-          </div>
-
-
-          <h6 class="card-header">Difficulty (out of 10)</h6>
-
-          <div class="card-body">
-            <p>{{ item.value / 100 }}</p>
-          </div>
-
+          <br>
         </div>
 
       </div>

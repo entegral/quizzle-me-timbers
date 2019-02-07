@@ -34,9 +34,22 @@ export class HostComponent implements OnInit {
   constructor(public fb: FirebaseService, public authService: AuthenticationService, public router: Router, public api: ApiService) {
    }
 
+   scrubQuestion(question){
+     let cleanString1: string = question;
+     let cleanString2
+     let doubleQuote = /&quot;/gi
+     let singleQuote = /&#039;/gi
+     cleanString1 = question.replace(doubleQuote, '"');
+     cleanString2 = cleanString1.replace(singleQuote, "'");
+     return cleanString2;
+   }
+
   ngOnInit() {
     this.api.clueList.subscribe((response) => {
-      this.upcomingQuestions = response;
+      this.upcomingQuestions = response.results.map(question => {
+        return { ...question, question: this.scrubQuestion(question)}
+      });
+
     });
   }
 

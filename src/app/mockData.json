@@ -1,0 +1,589 @@
+{
+    "response_code": 0,
+    "results": [
+        {
+            "category": "Entertainment: Comics",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "In Marvel Comics, Taurus is the founder and leader of which criminal organization?",
+            "correct_answer": "Zodiac",
+            "incorrect_answers": [
+                "Scorpio",
+                "Tiger Mafia",
+                "The Union"
+            ]
+        },
+        {
+            "category": "Entertainment: Video Games",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "What was the code name for the &quot;Nintendo Gamecube&quot;?",
+            "correct_answer": "Dolphin",
+            "incorrect_answers": [
+                "Nitro",
+                "Revolution",
+                "Atlantis"
+            ]
+        },
+        {
+            "category": "Entertainment: Video Games",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Just Cause 2 was mainly set in what fictional Southeast Asian island country?",
+            "correct_answer": "Panau",
+            "incorrect_answers": [
+                "Davao",
+                "Macau",
+                "Palau"
+            ]
+        },
+        {
+            "category": "Geography",
+            "type": "boolean",
+            "difficulty": "medium",
+            "question": "The surface area of Russia is slightly larger than that of the dwarf planet Pluto.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "category": "General Knowledge",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "Which sign of the zodiac is represented by the Crab?",
+            "correct_answer": "Cancer",
+            "incorrect_answers": [
+                "Libra",
+                "Virgo",
+                "Sagittarius"
+            ]
+        },
+        {
+            "category": "Animals",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "What color/colour is a polar bear&#039;s skin?",
+            "correct_answer": "Black",
+            "incorrect_answers": [
+                "White",
+                "Pink",
+                "Green"
+            ]
+        },
+        {
+            "category": "Sports",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "With which doubles partner did John McEnroe have most success?",
+            "correct_answer": "Peter Fleming",
+            "incorrect_answers": [
+                "Mark Woodforde",
+                "Michael Stich",
+                "Mary Carillo"
+            ]
+        },
+        {
+            "category": "Entertainment: Music",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Which singer was featured in Swedish producer Avicii&#039;s song &quot;Wake Me Up&quot;?",
+            "correct_answer": "Aloe Blacc",
+            "incorrect_answers": [
+                "John Legend",
+                "CeeLo Green",
+                "Pharrell Williams"
+            ]
+        },
+        {
+            "category": "General Knowledge",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "The words &quot;bungalow&quot; and &quot;shampoo&quot; originate from the languages of which country?",
+            "correct_answer": "India",
+            "incorrect_answers": [
+                "Papua New Guinea",
+                "Ethiopia",
+                "China"
+            ]
+        },
+        {
+            "category": "Geography",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Which of the following countries is within the Eurozone but outside of the Schengen Area?",
+            "correct_answer": "Cyprus",
+            "incorrect_answers": [
+                "Malta",
+                "Greece",
+                "Portugal"
+            ]
+        },
+        {
+            "category": "Entertainment: Musicals & Theatres",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Which of these musicals won the Tony Award for Best Musical?",
+            "correct_answer": "Rent",
+            "incorrect_answers": [
+                "The Color Purple",
+                "American Idiot",
+                "Newsies"
+            ]
+        },
+        {
+            "category": "Geography",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "What is the capital of the US state Nevada?",
+            "correct_answer": "Carson City",
+            "incorrect_answers": [
+                "Las Vegas",
+                "Henderson",
+                "Reno"
+            ]
+        },
+        {
+            "category": "Science: Gadgets",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "The term &quot;battery&quot; to describe an electrical storage device was coined by?",
+            "correct_answer": "Benjamin Franklin",
+            "incorrect_answers": [
+                "Nikola Tesla",
+                "Luigi Galvani",
+                " Alessandro Volta"
+            ]
+        },
+        {
+            "category": "Entertainment: Music",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Which of these is NOT the name of an album released by Miami-based producer DJ Khaled?",
+            "correct_answer": "Don&#039;t Ever Play Yourself",
+            "incorrect_answers": [
+                "Major Key",
+                "Suffering From Success",
+                "I Changed A Lot"
+            ]
+        },
+        {
+            "category": "Entertainment: Japanese Anime & Manga",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "In the 9th Pokemon movie, who is the Prince of the Sea?",
+            "correct_answer": "Manaphy",
+            "incorrect_answers": [
+                "Ash",
+                "May",
+                "Phantom"
+            ]
+        },
+        {
+            "category": "Entertainment: Video Games",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "Which of these online games was originally named LindenWorld in it&#039;s early development?",
+            "correct_answer": "SecondLife",
+            "incorrect_answers": [
+                "ActiveWorlds",
+                "IMVU",
+                "HabboHotel"
+            ]
+        },
+        {
+            "category": "Science & Nature",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "What is the atomic number of the element Strontium?",
+            "correct_answer": "38",
+            "incorrect_answers": [
+                "73",
+                "47",
+                "11"
+            ]
+        },
+        {
+            "category": "General Knowledge",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "What is the nickname of the US state of California?",
+            "correct_answer": "Golden State",
+            "incorrect_answers": [
+                "Sunshine State",
+                "Bay State",
+                "Treasure State"
+            ]
+        },
+        {
+            "category": "Geography",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "What year is on the flag of the US state Wisconsin?",
+            "correct_answer": "1848",
+            "incorrect_answers": [
+                "1634",
+                "1783",
+                "1901"
+            ]
+        },
+        {
+            "category": "General Knowledge",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "What is the romanized Korean word for &quot;heart&quot;?",
+            "correct_answer": "Simjang",
+            "incorrect_answers": [
+                "Aejeong",
+                "Jeongsin",
+                "Segseu"
+            ]
+        },
+        {
+            "category": "Entertainment: Video Games",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "In Left 4 Dead, what is the name of the virus, as designated by CEDA, that causes most humans to turn into the Infected?",
+            "correct_answer": "Green Flu",
+            "incorrect_answers": [
+                "Yellow Fever",
+                "T-Virus",
+                "Raspberry Sniffles"
+            ]
+        },
+        {
+            "category": "Entertainment: Video Games",
+            "type": "boolean",
+            "difficulty": "medium",
+            "question": "In &quot;Team Fortress 2&quot;, the &quot;Bill&#039;s Hat&quot; is a reference to the game &quot;Dota 2&quot;.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+                "True"
+            ]
+        },
+        {
+            "category": "General Knowledge",
+            "type": "boolean",
+            "difficulty": "easy",
+            "question": "In 2010, Twitter and the United States Library of Congress partnered together to archive every tweet by American citizens.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "category": "Entertainment: Japanese Anime & Manga",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Which one of these Manga titles was not created by Urasawa Naoki?",
+            "correct_answer": "My Father&#039;s Journal",
+            "incorrect_answers": [
+                "Billy Bat",
+                "20th Century Boys",
+                "Monster"
+            ]
+        },
+        {
+            "category": "Entertainment: Film",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "What is the oldest Disney film?",
+            "correct_answer": "Snow White and the Seven Dwarfs",
+            "incorrect_answers": [
+                "Pinocchio",
+                "Dumbo",
+                "Fantasia"
+            ]
+        },
+        {
+            "category": "Entertainment: Cartoon & Animations",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "What Cartoon Network show aired its first episode on November 4th, 2013?",
+            "correct_answer": "Steven Universe",
+            "incorrect_answers": [
+                "Regular Show",
+                "Adventure Time",
+                "The Amazing World of Gumball"
+            ]
+        },
+        {
+            "category": "Animals",
+            "type": "boolean",
+            "difficulty": "easy",
+            "question": "In 2016, the IUCN reclassified the status of Giant Pandas from endangered to vulnerable.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "category": "General Knowledge",
+            "type": "boolean",
+            "difficulty": "medium",
+            "question": "The French word to travel is &quot;Travail&quot;",
+            "correct_answer": "False",
+            "incorrect_answers": [
+                "True"
+            ]
+        },
+        {
+            "category": "Sports",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "Which car company is the only Japanese company which won the 24 Hours of Le Mans?",
+            "correct_answer": "Mazda",
+            "incorrect_answers": [
+                "Toyota",
+                "Subaru",
+                "Nissan"
+            ]
+        },
+        {
+            "category": "Entertainment: Japanese Anime & Manga",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "In &quot;Future Diary&quot;, what is the name of Yuno Gasai&#039;s Phone Diary?",
+            "correct_answer": "Yukiteru Diary",
+            "incorrect_answers": [
+                "Murder Diary",
+                "Escape Diary ",
+                "Justice Diary "
+            ]
+        },
+        {
+            "category": "Entertainment: Japanese Anime & Manga",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "What song plays in the ending credits of the anime &quot;Ergo Proxy&quot;?",
+            "correct_answer": "Paranoid Android",
+            "incorrect_answers": [
+                "Sadistic Summer",
+                "Bittersweet Symphony",
+                "Mad World"
+            ]
+        },
+        {
+            "category": "Geography",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "What tiny principality lies between Spain and France?",
+            "correct_answer": "Andorra",
+            "incorrect_answers": [
+                "Liechtenstein",
+                "Monaco",
+                "San Marino"
+            ]
+        },
+        {
+            "category": "Entertainment: Japanese Anime & Manga",
+            "type": "multiple",
+            "difficulty": "easy",
+            "question": "In &quot;A Certain Scientific Railgun&quot;, how many &quot;sisters&quot; did Accelerator have to kill to achieve the rumored level 6?",
+            "correct_answer": "20,000",
+            "incorrect_answers": [
+                "128",
+                "10,000",
+                "5,000"
+            ]
+        },
+        {
+            "category": "Entertainment: Video Games",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "What do the video games No Man&rsquo;s Sky and Mighty No. 9 have in common?",
+            "correct_answer": "Both were announced in 2013.",
+            "incorrect_answers": [
+                "Both were crowdfunded.",
+                "Both were developed by indie studios.",
+                "Both were released for the PlayStation 3."
+            ]
+        },
+        {
+            "category": "History",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "What was the bloodiest single-day battle during the American Civil War?",
+            "correct_answer": "The Battle of Antietam",
+            "incorrect_answers": [
+                "The Siege of Vicksburg",
+                "The Battle of Gettysburg",
+                "The Battles of Chancellorsville"
+            ]
+        },
+        {
+            "category": "Entertainment: Comics",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "In what year did the first &quot;The Walking Dead&quot; comic come out?",
+            "correct_answer": "2003",
+            "incorrect_answers": [
+                "2001",
+                "2006",
+                "1999"
+            ]
+        },
+        {
+            "category": "Entertainment: Television",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "In Star Trek, what is the name of Spock&#039;s father?",
+            "correct_answer": "Sarek",
+            "incorrect_answers": [
+                "Tuvok",
+                "T&#039;Pal",
+                "Surak"
+            ]
+        },
+        {
+            "category": "History",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "What was the unofficial name for Germany between 1919 and 1933?",
+            "correct_answer": "Weimar Republic",
+            "incorrect_answers": [
+                "German Democratic Republic",
+                "Federal Republic of Germany",
+                "Oesterreich "
+            ]
+        },
+        {
+            "category": "History",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "What was the total length of the Titanic?",
+            "correct_answer": "882 ft | 268.8 m",
+            "incorrect_answers": [
+                "759 ft | 231.3 m",
+                "1042 ft | 317.6 m",
+                "825 ft | 251.5 m"
+            ]
+        },
+        {
+            "category": "Entertainment: Television",
+            "type": "boolean",
+            "difficulty": "medium",
+            "question": "Klingons once had a period of Democracy in their history, they referred to it as the &quot;Dark Times&quot;.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "category": "Entertainment: Video Games",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "In the game &quot;Brawlhalla&quot;, what species is the character B&ouml;dvar is?",
+            "correct_answer": "Half Human / Half Bear",
+            "incorrect_answers": [
+                "A Human",
+                "Half Wolf / Half Bear",
+                "Half Tiger /  Half Human"
+            ]
+        },
+        {
+            "category": "Entertainment: Cartoon & Animations",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "In &quot;SpongeBob SquarePants&quot;, what is the name of Sandy Cheek&#039;s place of residence?",
+            "correct_answer": "Sandy&#039;s Treedome",
+            "incorrect_answers": [
+                "&quot;The Dome&quot;",
+                "Sandy&#039;s Bubble",
+                "Auquatic Reseach Centre"
+            ]
+        },
+        {
+            "category": "Science: Mathematics",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "What is the plane curve proposed by Descartes to challenge Fermat&#039;s extremum-finding techniques called?",
+            "correct_answer": "Folium of Descartes",
+            "incorrect_answers": [
+                "Elliptic Paraboloid of Descartes",
+                "Cartesian Coordinates",
+                "Descarte&#039;s Helicoid"
+            ]
+        },
+        {
+            "category": "Entertainment: Video Games",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "In the &quot;Call Of Duty: Zombies&quot; map &quot;Der Riese&quot;, what is the name of the &quot;Pack-A-Punched PPSH-41&quot;?",
+            "correct_answer": "The Reaper",
+            "incorrect_answers": [
+                "Lamentation",
+                "The Grim Reaper",
+                "The Eviscerator  "
+            ]
+        },
+        {
+            "category": "Science: Computers",
+            "type": "boolean",
+            "difficulty": "medium",
+            "question": "Linus Sebastian is the creator of the Linux kernel, which went on to be used in Linux, Android, and Chrome OS.",
+            "correct_answer": "False",
+            "incorrect_answers": [
+                "True"
+            ]
+        },
+        {
+            "category": "Entertainment: Video Games",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "In Guild Wars 2, what is Tybalt&#039;s last name?",
+            "correct_answer": "Leftpaw",
+            "incorrect_answers": [
+                "Wildeye",
+                "Blightaxe",
+                "Blackblood"
+            ]
+        },
+        {
+            "category": "Science & Nature",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "Which of the following is the term for &quot;surgical complications resulting from surgical sponges left inside the patient&#039;s body?",
+            "correct_answer": "Gossypiboma",
+            "incorrect_answers": [
+                "Gongoozler",
+                "Jentacular",
+                "Meupareunia"
+            ]
+        },
+        {
+            "category": "Entertainment: Music",
+            "type": "multiple",
+            "difficulty": "medium",
+            "question": "Which of these songs is NOT in The Beatles&#039; album &quot;Sgt. Pepper&#039;s Lonely Hearts Club Band&quot;?",
+            "correct_answer": "Strawberry Fields Forever",
+            "incorrect_answers": [
+                "Getting Better",
+                "Fixing a Hole",
+                "Lucy in the Sky with Diamonds"
+            ]
+        },
+        {
+            "category": "Entertainment: Video Games",
+            "type": "boolean",
+            "difficulty": "easy",
+            "question": "&quot;Sonic the Hedgehog 2&quot; originally was going to have a time travel system.",
+            "correct_answer": "True",
+            "incorrect_answers": [
+                "False"
+            ]
+        },
+        {
+            "category": "Celebrities",
+            "type": "multiple",
+            "difficulty": "hard",
+            "question": "Gabe Newell was born in which year?",
+            "correct_answer": "1962 ",
+            "incorrect_answers": [
+                "1970",
+                "1960",
+                "1972"
+            ]
+        }
+    ]
+}

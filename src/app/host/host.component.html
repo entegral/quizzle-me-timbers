@@ -98,7 +98,7 @@
 
                   <div class="col-md-11">
                     <h6> Q: {{question.question}} </h6>
-                    <p>A: {{question.answer}}</p>
+                    <p>A: {{question.correct_answer}}</p>
                   </div>
 
                 </div>
@@ -121,18 +121,23 @@
           <div *ngFor="let item of (displayQuestions | async)?.slice().reverse()">
 
             <div class="questionCard">
+              <h6 class="card-header">Category </h6>
+
+              <div class="card-body">
+                <p>{{ item.category }}</p>
+              </div>
 
               <h6 class="card-header">{{ item.question }}</h6>
 
               <div class="card-body">
-                <p>{{ item.answer }}</p>
+                <p>{{ item.correct_answer }}</p>
               </div>
 
 
-              <h6 class="card-header">Difficulty (out of 10)</h6>
+              <h6 class="card-header">Difficulty </h6>
 
               <div class="card-body">
-                <p>{{ item.value / 100 }}</p>
+                <p>{{ item.difficulty }}</p>
               </div>
 
             </div>

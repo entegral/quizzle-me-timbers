@@ -14,6 +14,6 @@ export class ApiService {
   clueList: Observable<any>;
 
   constructor(private http: HttpClient) {
-    this.clueList = this.http.get('http://jservice.io/api/clues?category=306');
+    this.clueList = this.http.get('https://jservice.io/api/clues?category=306');
   }
 }
