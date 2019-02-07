@@ -24,6 +24,36 @@
   margin-bottom: 2.5%;
 }
 
+.header{
+
+}
+ .card-header{
+   margin-bottom: 2.5%;
+ }
+
+.section{
+
+  border-bottom: 1px solid grey;
+
+}
+
+.questionButton{
+  width: 30px;
+}
+
+#delete-button{
+  margin-bottom: 5px;
+}
+
+#add-button{
+  margin: auto;
+}
+
+.section-element{
+  padding-top: 5px;
+  color: white;
+}
+
 
 .content-center{
   margin: auto;
@@ -36,6 +66,10 @@
   padding-left: 5%;
 }
 
+.display-questions{
+  margin-bottom: 2.5%;
+}
+
 .gameSetUp{
   width: 50%;
   margin: auto;
@@ -45,8 +79,19 @@ h5{
   color: white;
 }
 
+h3{
+  color: white;
+}
+h6{
+  color: white;
+}
+
 button{
   border: none;
+}
+
+p{
+  color: white;
 }
 
 #logout{
