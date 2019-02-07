@@ -19,6 +19,9 @@ export class TeamComponent implements OnInit {
   currentGame: Observable<any> = null;
   gameId: string;
   displayGameView: boolean = false;
+  displayTeamSelectionCard: boolean = false;
+  gameKeyView: boolean = true;
+  gameplayView: boolean = false;
 
   constructor(public fb: FirebaseService) {
     // this.currentGame = this.fb.getCurrentGame();
@@ -33,6 +36,7 @@ export class TeamComponent implements OnInit {
     console.log('teamName ',this.teamName);
     this.fb.addTeam(this.gameId, this.currentTeam);
     this.showGameView();
+    this.hideSetup();
   }
 
   toggleEditTeamName(){
@@ -42,10 +46,19 @@ export class TeamComponent implements OnInit {
   joinGame(){
     this.fb.setGameById(this.gameId);
     this.currentGame = this.fb.initComponentWithGameObservable();
+    if (this.currentGame){
+      this.displayTeamSelectionCard = true;
+    }
   }
 
   showGameView(){
     this.displayGameView = true;
   }
 
+  hideSetup(){
+    this.displayTeamSelectionCard = false;
+    this.gameKeyView = false;
+    this.gameplayView = true;
+    
+  }
 }

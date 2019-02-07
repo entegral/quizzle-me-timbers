@@ -1,5 +1,6 @@
 <div class="team-content text-center">
   <div class="row">
+
 <div class="col gamekey text-center">
       <div *ngIf="!currentGame">
         <input class="input" [(ngModel)]='gameId' placeholder="JoinGame" type="text" name="gameId" placeholder="Game Key">
@@ -29,7 +30,9 @@
           <input [(ngModel)]='teamName' name='teamName' class="input" placeholder="Add a Team">
           <button class="btn btn-dark" (click)='toggleEditTeamName()'>Enter</button>
         </div>
+
       </div>
     </div>
   </div>
+
 </div>
