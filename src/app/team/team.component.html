@@ -7,6 +7,7 @@
           <button (click)='joinGame()' class="btn btn-dark">Join Game</button>
         </div>
         <div *ngIf="currentGame" class="current-game">
+
           <h3>Joined:</h3>
           <h3><i>{{ (currentGame | async)?.title }}</i></h3>
         </div>
@@ -29,7 +30,9 @@
             <button class="btn btn-dark" (click)='toggleEditTeamName()'>Enter</button>
           </div>
         </div>
+
       </div>
     </div>
   </div>
+
 </div>

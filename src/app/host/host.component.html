@@ -23,12 +23,13 @@
 
 
 
-  <div id="question-queue">
-    <ul *ngFor='let question of displayQuestions'>
-      <h3>Q: {{question.question}}</h3>
-      <p>A: {{question.answer}}</p>
-    </ul>
-  </div>
+
+    <div id="question-queue">
+      <ul *ngFor='let question of displayQuestions'>
+        <h3>Q: {{question.question}}</h3>
+        <p>A: {{question.correct_answer}}</p>
+      </ul>
+    </div>
 
 
 
@@ -66,11 +67,11 @@
         <div class="questionCard" *ngIf="question">
 
 
-          <div class="row" id='{{question.id}}'>
-            <div class="col-md-1">
-              <button (click)='deleteQuestion(question)' class="btn btn-dark btn-sm questionButton">x</button>
-              <br>
-              <button (click)='addToQuestionList(question); ' class="btn btn-success btn-sm questionButton">+</button>
+
+                  <div class="col-md-11">
+                    <h6> Q: {{question.question}} </h6>
+                    <p>A: {{question.correct_answer}}</p>
+                  </div>
 
             </div>
 
@@ -100,7 +101,10 @@
 
           <div class="questionCard">
 
-            <h6 class="card-header">{{ item.question }}</h6>
+
+              <div class="card-body">
+                <p>{{ item.correct_answer }}</p>
+              </div>
 
             <div class="card-body">
               <p>{{ item.answer }}</p>

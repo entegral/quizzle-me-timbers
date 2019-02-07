@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthenticationService } from '../services/authentication.service';
 import { Router } from '@angular/router';
+import { ApiService } from '../services/api.service';
+import { Observable } from 'rxjs/Observable';
+
 
 @Component({
   selector: 'app-home',
@@ -17,8 +20,7 @@ export class HomeComponent implements OnInit {
 
   constructor(public authService: AuthenticationService, public router: Router) { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   login() {
     console.log('email/pass ', this.email, this.password);
