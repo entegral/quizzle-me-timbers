@@ -121,13 +121,19 @@
           <div *ngFor="let item of (displayQuestions | async)?.slice().reverse()">
 
             <div class="questionCard">
-              <h6 class="card-header">Category </h6>
+              <h6 class="card-header">Category: </h6>
 
               <div class="card-body">
                 <p>{{ item.category }}</p>
               </div>
 
-              <h6 class="card-header">{{ item.question }}</h6>
+              <h6 class="card-header">Question: </h6>
+
+              <div class="card-body">
+                <p>{{ item.question }}</p>
+              </div>
+
+              <h6 class="card-header">Answer: </h6>
 
               <div class="card-body">
                 <p>{{ item.correct_answer }}</p>

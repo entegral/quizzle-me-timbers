@@ -35,18 +35,15 @@ export class HostComponent implements OnInit {
   }
 
    scrubQuestion(question){
-     console.log("scrubbing question:", question.question);
      let cleanString1: string = question.question;
-     let cleanString2: string;
-     let cleanString3: string;
-     let cleanString4: string;
      let doubleQuote = "&quot;"
      let singleQuote = "&#039;"
-     cleanString1 = question.question.replace(doubleQuote, '"');
-     cleanString2 = cleanString1.replace(doubleQuote, '"');
-     cleanString3 = cleanString2.replace(singleQuote, "'");
-     cleanString4 = cleanString3.replace(singleQuote, "'");
-     return cleanString4;
+     for(let i = 0; i < 10; i++){
+       cleanString1 = cleanString1.replace(doubleQuote, '"');
+       cleanString1 = cleanString1.replace(singleQuote, '"');
+     }
+     console.log("scrubbed question:", cleanString1);
+     return cleanString1;
    }
 
   ngOnInit() {
