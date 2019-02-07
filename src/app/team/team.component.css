@@ -1,5 +1,67 @@
+.team-content {
+  margin: auto;
+  margin-top: 15%;
+  width: 50%;
+  background-color: #41414186;
+  border: 0px solid black;
+  border-radius: 20px;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.gamekey{
+  width: 50%;
+  margin: auto;
+}
 
 .teamName{
+  width: 50%;
+  margin: auto;
+}
+
+.input {
+  border: 0px;
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  padding: 5%;
+  border-radius: .25rem;
+}
+
+.btn {
+  border: 0px solid black;
+  font-size: 1.5rem;
+  padding: 15px;
+  margin: 30px;
+  width: 80%;
+}
+
+#team-name {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin-bottom: 5%;
+  padding: 5%;
+  border-radius: .25rem;
+  background: white;
+  border-radius: .25rem;
+}
+
+#edit-button {
+  width: 50%;
+  margin-right: 0px;
+
+}
+
+#submit-button {
+  width: 50%;
+  margin-left: 0px;
+}
+
+/* .teamName{
   margin-top: 50px;
 }
 
@@ -30,4 +92,4 @@ textarea{
 
 .logo{
   width:350px;
-}
+} */
