@@ -48,7 +48,7 @@
     <div id="question-queue">
       <ul *ngFor='let question of displayQuestions'>
         <h3>Q: {{question.question}}</h3>
-        <p>A: {{question.answer}}</p>
+        <p>A: {{question.correct_answer}}</p>
       </ul>
     </div>
 
@@ -98,7 +98,7 @@
 
                   <div class="col-md-11">
                     <h6> Q: {{question.question}} </h6>
-                    <p>A: {{question.answer}}</p>
+                    <p>A: {{question.correct_answer}}</p>
                   </div>
 
                 </div>
@@ -125,7 +125,7 @@
               <h6 class="card-header">{{ item.question }}</h6>
 
               <div class="card-body">
-                <p>{{ item.answer }}</p>
+                <p>{{ item.correct_answer }}</p>
               </div>
 
 

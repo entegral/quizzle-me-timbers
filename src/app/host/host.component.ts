@@ -16,7 +16,7 @@ import { AngularFireDatabase } from 'angularfire2/database';
 export class HostComponent implements OnInit {
 
   // Question related variables and observables
-  upcomingQuestions: Object[] = [];
+  upcomingQuestions = [];
   displayQuestions: Observable<any[]>;
 
   // Game related variables and observables
@@ -32,11 +32,13 @@ export class HostComponent implements OnInit {
 
 
   constructor(public fb: FirebaseService, public authService: AuthenticationService, public router: Router, public api: ApiService) {
-   }
+  }
 
   ngOnInit() {
     this.api.clueList.subscribe((response) => {
-      this.upcomingQuestions = response;
+      this.upcomingQuestions = response.results;
+      console.log(this.upcomingQuestions);
+
     });
   }
 

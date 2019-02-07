@@ -14,6 +14,7 @@ export class ApiService {
   clueList: Observable<any>;
 
   constructor(private http: HttpClient) {
-    this.clueList = this.http.get('http://jservice.io/api/clues?category=306');
+    this.clueList = this.http.get('https://opentdb.com/api.php?amount=50&type=multiple');
   }
-}
+
+
