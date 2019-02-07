@@ -1,7 +1,25 @@
-.card-body{
-  text-align: center;
+.container{
+  margin-top: 5%
 }
 
+.content-box {
+  background-color: #41414186;
+  border: 0px solid black;
+  border-radius: 20px;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.gameSetUp{
+  width: 50%;
+  margin: auto;
+}
+
+h5{
+  color: white;
+}
 
 li {
   color: lightgrey;

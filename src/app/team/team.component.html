@@ -6,15 +6,13 @@
           <input class="input" [(ngModel)]='gameId' placeholder="JoinGame" type="text" name="gameId" placeholder="Game Key">
           <button (click)='joinGame()' class="btn btn-dark">Join Game</button>
         </div>
-        <div *ngIf="currentGame">
-          <div class="card-header">
-            <h3>Joined:</h3>
-            <h3>{{ (currentGame | async)?.title }} </h3>
-          </div>
+        <div *ngIf="currentGame" class="current-game">
+          <h3>Joined:</h3>
+          <h3><i>{{ (currentGame | async)?.title }}</i></h3>
         </div>
       </div>
 
-      <div class="col teamName text-center">
+      <div *ngIf='displayGameView' class="col teamName text-center">
         <div *ngIf="teamNameSelected">
           <h5 id="team-name" class="input">{{ teamName }}</h5>
           <div class="btn-group" role="group" aria-label="Basic example">

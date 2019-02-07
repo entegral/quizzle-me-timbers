@@ -29,8 +29,6 @@ export class TeamComponent implements OnInit {
 
   addTeamToGame(){
     this.currentTeam = new Team(this.teamName);
-    console.log('currentTeam ',this.currentTeam);
-    console.log('teamName ',this.teamName);
     this.fb.addTeam(this.gameId, this.currentTeam);
     this.showGameView();
   }
@@ -40,6 +38,7 @@ export class TeamComponent implements OnInit {
   }
 
   joinGame(){
+    this.displayGameView = !this.displayGameView;
     this.fb.setGameById(this.gameId);
     this.currentGame = this.fb.initComponentWithGameObservable();
   }
