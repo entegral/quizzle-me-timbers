@@ -35,18 +35,25 @@ export class HostComponent implements OnInit {
   }
 
    scrubQuestion(question){
-     let cleanString1: string = question;
-     let cleanString2
-     let doubleQuote = /&quot;/gi
-     let singleQuote = /&#039;/gi
-     cleanString1 = question.replace(doubleQuote, '"');
-     cleanString2 = cleanString1.replace(singleQuote, "'");
-     return cleanString2;
+     console.log("scrubbing question:", question.question);
+     let cleanString1: string = question.question;
+     let cleanString2: string;
+     let cleanString3: string;
+     let cleanString4: string;
+     let doubleQuote = "&quot;"
+     let singleQuote = "&#039;"
+     cleanString1 = question.question.replace(doubleQuote, '"');
+     cleanString2 = cleanString1.replace(doubleQuote, '"');
+     cleanString3 = cleanString2.replace(singleQuote, "'");
+     cleanString4 = cleanString3.replace(singleQuote, "'");
+     return cleanString4;
    }
 
   ngOnInit() {
     this.api.clueList.subscribe((response) => {
-      this.upcomingQuestions = response.results;
+      this.upcomingQuestions = response.results.map(question => {
+        return { ...question, question: this.scrubQuestion(question)}
+      });
 
 
     });
