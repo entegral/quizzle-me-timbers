@@ -13,23 +13,23 @@ export class HomeComponent implements OnInit {
   email: string;
   password: string;
   errorMessage: string;
-  displayHostLogin: boolean = false;
+  displayHostLogin = false;
 
   constructor(public authService: AuthenticationService, public router: Router) { }
 
   ngOnInit() {
   }
 
-  login(){
-    console.log('email/pass ', this.email, this.password)
+  login() {
+    console.log('email/pass ', this.email, this.password);
     this.authService.login(this.email, this.password);
     this.email = this.password = '';
     let authTest: string;
-    this.authService.user.subscribe((response)=>{
+    this.authService.user.subscribe((response) => {
       response ? authTest = response['uid'] : null;
       console.log(authTest);
-      if (response && authTest){
-        console.log('inside the if')
+      if (response && authTest) {
+        console.log('inside the if');
         this.router.navigate(['host']);
       }
       else {
