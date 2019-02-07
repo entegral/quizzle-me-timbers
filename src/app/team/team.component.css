@@ -1,4 +1,4 @@
-.team-content {
+/* .team-content {
   margin: auto;
   margin-top: 15%;
   width: 50%;
@@ -59,9 +59,9 @@
 #submit-button {
   width: 50%;
   margin-left: 0px;
-}
+} */
 
-/* .teamName{
+.teamName{
   margin-top: 50px;
 }
 
@@ -92,4 +92,4 @@ textarea{
 
 .logo{
   width:350px;
-} */
+}
