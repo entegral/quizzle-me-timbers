@@ -3,14 +3,51 @@
   font-weight: bold;
 }
 
-.card {
-  margin-top: 50px;
-}
-.team-btn {
-  margin: 25px;
+.login-box {
+  margin: auto;
+  margin-top: 15%;
+  width: 50%;
 }
 
-.host-btn {
-  margin-left: 2px;
-  margin-top: 15px;
+.input {
+  border: 0px;
+  width: 80%;
+  padding-top: 2.5%;
+  padding-bottom: 2.5%;
+  padding-left: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+
+}
+
+#email-input {
+  border-top-left-radius: .25rem;
+  border-top-right-radius: .25rem;
+  margin-top: 5%;
+  border-bottom: 1px solid grey;
+}
+
+#password-input {
+  border-bottom-left-radius: .25rem;
+  border-bottom-right-radius: .25rem;
+  margin-bottom: 5%;
+
+}
+
+.login {
+  background-color: #41414186;
+  border: 0px solid black;
+  border-radius: 20px;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.btn {
+  border: 0px solid black;
+  font-size: 1.5rem;
+  padding: 25px;
+  margin: 30px;
+  width: 80%;
 }

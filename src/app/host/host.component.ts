@@ -15,21 +15,38 @@ import { AngularFireDatabase } from 'angularfire2/database';
 })
 export class HostComponent implements OnInit {
 
-  clues: Observable<any>;
+  // Question related variables and observables
+  upcomingQuestions: Object[] = [];
+  displayQuestions: Observable<any[]>;
+
+  // Game related variables and observables
   currentGame: Observable<any> = null;
   newGameTitle: string;
   gameId: string;
+
+  // HTML displaying variables
   showCurrentGame: boolean = false;
   showHostView: boolean = false;
   showGameSetUp: boolean = true;
-
   displayQuestionCards: boolean = false;
 
 
-  constructor(public fb: FirebaseService, public authService: AuthenticationService, public router: Router) {
+  constructor(public fb: FirebaseService, public authService: AuthenticationService, public router: Router, public api: ApiService) {
    }
 
   ngOnInit() {
+    this.api.clueList.subscribe((response) => {
+      this.upcomingQuestions = response;
+    });
+  }
+
+  addToQuestionList(question) {
+    this.fb.addDisplayQuestionToList(this.gameId, question);
+    this.deleteQuestion(question);
+  }
+
+  deleteQuestion(question){
+    delete this.upcomingQuestions[this.upcomingQuestions.indexOf(question)];
   }
 
 
@@ -38,10 +55,14 @@ export class HostComponent implements OnInit {
     this.router.navigate(['']);
   }
 
-  loadGame(key: string){
-    this.fb.setGameById(key);
+  loadGame(){
+    this.fb.setGameById(this.newGameTitle);
     this.currentGame = this.fb.initComponentWithGameObservable();
-
+    this.displayQuestions = this.fb.displayQuestions;
+    this.gameId = this.newGameTitle;
+    this.toggleShowCurrentGame();
+    this.toggleShowHostView();
+    this.toggleShowGameSetUp();
   }
 
   toggleShowCurrentGame(){
@@ -59,10 +80,11 @@ export class HostComponent implements OnInit {
   startNewGame(){
     this.gameId = this.fb.addGame(this.newGameTitle);
     this.fb.setGameById(this.gameId);
+    this.currentGame = this.fb.initComponentWithGameObservable();
+    this.displayQuestions = this.fb.displayQuestions;
     this.toggleShowCurrentGame();
     this.toggleShowHostView();
     this.toggleShowGameSetUp();
-    this.currentGame = this.fb.initComponentWithGameObservable();
 
   }
 
